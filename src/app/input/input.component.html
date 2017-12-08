@@ -1,0 +1,12 @@
+<form #formErrors='ngForm' (submit)="formSubmit(myUsername)">
+<h3>Github Username: 
+  <input 
+  type="text" 
+  name="username"
+  required
+  [(ngModel)]="myUsername.username"
+  #username='ngModel'
+  ></h3>
+  <span *ngIf ="username.errors">Username is Required</span>
+<input *ngIf="formErrors.valid" type="submit" value="Calculate my Github Score">
+</form>

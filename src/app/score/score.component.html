@@ -1,0 +1,7 @@
+<h3>Your Score: {{data.public_repos + data.followers}}</h3>
+
+<p *ngIf ="data.public_repos + data.followers < 20" style = 'color: red;' >Needs Work</p>
+<p *ngIf ="data.public_repos + data.followers < 50 && data.public_repos + data.followers > 20" style = 'color:orange' >A decent Start</p>
+<p *ngIf ="data.public_repos + data.followers < 100 && data.public_repos + data.followers > 50" style = 'color: black;' >Doing Great</p>
+<p *ngIf ="data.public_repos + data.followers < 200 && data.public_repos + data.followers > 100" style = 'color: green;' >Great Job</p>
+<p *ngIf ="data.public_repos + data.followers >= 200 && data.public_repos + data.followers > 200" style = 'color: blue;' >Github Elite!</p>
